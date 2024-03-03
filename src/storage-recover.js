@@ -15,7 +15,7 @@ export default function retrieveStoredData(key) {
             // checkList is just an array so we just copy
             for (let checklistItemRaw of todoItemRaw.checkList) {
                 const checklistItemRestored = checklistItemRaw;
-                todoItemRestored.addChecklistItem(checklistItemRestored, checklistItemRaw.state);
+                todoItemRestored.addChecklistItem(checklistItemRestored.value, checklistItemRaw.state);
             }
 
             // 'For in' to restore todo properties except for checkList
